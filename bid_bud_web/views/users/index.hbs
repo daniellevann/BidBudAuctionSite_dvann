@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+
+<div style="display: flex; flex-direction:row;flex-wrap:wrap;justify-content:center"></div>
+{{#userList}}
+<div class="card" style="width: 20rem; margin:20px;">
+<h3>{{this.email_address}}</a></h3>
+<div class="card-body">
+    <h5 class="card-title">{{this.title}}</h5>
+    <h6 class="card-text">{{this.phone_number}}</h6>
+   <a href="users/{{this.email_address}}" class="btn btn-primary">View User</a>
+  </div>
+</div>
+{{/userList}}
+</div>

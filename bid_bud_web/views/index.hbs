@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<h3>Current Amount Raised: ${{total}}</h3>
+<div style="display: flex; flex-direction:row;flex-wrap:wrap;justify-content:center">
+{{#items}}
+{{!-- <li><a href = "/item?_id={{this.title}}">{{this.title}}</a></li> --}}
+<div class="card" style="width: 18rem; margin:20px;">
+  <img class="card-img-top" src={{this.image}} alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{this.title}}</h5>
+    <h6 class="card-text">Current Bid: ${{this.current_bid}}</h6>
+    <p class="card-text">Artist: {{this.artist}}</p>
+{{!-- only linking to general form page right now. Need to add in query string --}}
+    <a href="/{{this.id}}" class="btn btn-primary">Make Bid</a>
+  </div>
+</div>
+{{/items}}
+</div>

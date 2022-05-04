@@ -1,0 +1,20 @@
+<h1>{{title}}</h1> 
+ <img src='https://storage.googleapis.com/auctionitemimages/{{id}}.jpeg'/>
+ <p>{{desc}}</p>
+ <p>Medium: {{med}}</p>
+ <p>Artist: {{artist}}</p>
+ <p>About Artist: {{about_artist}}</p>
+ <p>Size: {{size}}</p>
+ <div id = "form">
+            <form method = 'post' action = 'bid'>
+                <input type ="hidden" name = 'bid_amount' value={{bid}}>
+                <input type ="hidden" name = 'auction_item' value={{id}}>
+                <h3>Make Your Bid: ${{bid}} </h3>
+                <label for='email_address'>Input Your Email: </label>
+                <input type ='text' name = 'email_address'/>
+                <label for='phone_number'>Input Your Phone Number <small> (ex. +15555555555)</small>: </label>
+                <input type ='text' name = 'phone_number' placeholder="+15555555555"/>
+               <input type = 'submit'/>
+
+            </form>
+        </div>
